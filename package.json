@@ -31,7 +31,6 @@
     "grunt-testem": "~0.3.6",
     "grunt-qunit-cov": "~0.3.2",
     "grunt-plato": "~0.2.0",
-	"grunt-jasmine-runner" : "latest",
-	"grunt"         : "~0.3.9"
+	"grunt-contrib-jasmine" : "latest"  
   }
 }

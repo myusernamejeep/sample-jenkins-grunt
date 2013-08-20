@@ -51,23 +51,17 @@ module.exports = function(grunt) {
           'dist/metrics': [ 'src/*.js' ]
         }
       }
-    },{
+    }, 
     jasmine : {
-		  // Your project's source files
-		  src : 'src/**/*.js',
-		  // Your Jasmine spec files
-		  specs : 'specs/**/*spec.js',
-		  // Your spec helper files
-		  helpers : 'specs/helpers/*.js'
+		pivotal: {
+		  src: 'src/**/*.js',
+		  options: {
+			specs: 'specs/**/*spec.js',
+			helpers: 'specs/helpers/*.js'
+		  }
 		}
-	},
-	lint: {
-      files: ['src/**/*.js','spec/**/*.js']
-    },
-    watch: {
-      files: ['<config:jasmine.specs>','src/**/*js'],
-      tasks: 'jasmine'
-    } 
+		  
+	} 
   });
 
   // Register tasks.
@@ -78,11 +72,10 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-testem');
   grunt.loadNpmTasks('grunt-qunit-cov');
   grunt.loadNpmTasks('grunt-plato');
-  grunt.loadNpmTasks('grunt-jasmine-runner');
-
+  grunt.loadNpmTasks('grunt-contrib-jasmine');
 
   // Default task(s) 
-  grunt.registerTask('default', ['jshint', 'testem', 'clean', 'qunit-cov', 'lint', 'watch', 'jasmine']);
-  grunt.registerTask('jenkins', ['jshint', 'testem', 'clean', 'qunit-cov', 'plato', 'concat', 'uglify',  'lint', 'watch', 'jasmine']);
+  grunt.registerTask('default', ['jshint', 'testem', 'clean', 'qunit-cov',  'jasmine']);
+  grunt.registerTask('jenkins', ['jshint', 'testem', 'clean', 'qunit-cov', 'plato', 'concat', 'uglify', 'jasmine']);
 
 };
