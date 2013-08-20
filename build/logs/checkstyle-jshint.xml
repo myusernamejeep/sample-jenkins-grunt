@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<checkstyle version="4.3">
+	<file name="src\impressive.js">
+	</file>
+	<file name="src\superb.js">
+	</file>
+</checkstyle>

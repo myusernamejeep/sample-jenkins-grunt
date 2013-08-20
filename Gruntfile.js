@@ -12,8 +12,7 @@ module.exports = function(grunt) {
       build: {
         files: {
           'dist/<%= pkg.name %>.js': [
-            'src/superb.js',
-            'src/impressive.js'
+            'src/*.js' 
           ]
         }
       }
@@ -44,7 +43,7 @@ module.exports = function(grunt) {
     },
     plato: {
       options: {
-        title: 'Awesome Project',
+        title: 'Jenkin Grunt Jasmine',
         jshint: grunt.file.readJSON('.jshintrc')
       },
       metrics: {
@@ -62,6 +61,8 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-testem');
   grunt.loadNpmTasks('grunt-qunit-cov');
   grunt.loadNpmTasks('grunt-plato');
+  
+
 
   // Default task(s).
   grunt.registerTask('default', ['jshint', 'testem', 'clean', 'qunit-cov']);
