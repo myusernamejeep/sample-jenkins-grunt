@@ -1,17 +1,27 @@
 {
-  "name": "awesome",
+  "name": "grunt-jenkin-jasmine",
   "version": "0.0.1",
-  "description": "Sample project of Grunt on Jenkins",
-  "main": "awesome.js",
+  "description": "Test project of Grunt on Jenkins with jasmine Unittest",
+  "homepage" : "https://github.com/myusernamejeep/sample-jenkins-grunt",
+ 
   "scripts": {
-    "test": "grunt testem"
+    "test": "grunt jenkins"
+  },
+  "author"          : {
+    "name"  : "Jumphol",
+    "email" : "myusernamejeep@gmail.com",
+    "url"   : "http://github.com/myusernamejeep/"
+  },
+  "repository"      : {
+    "type" : "git",
+    "url"  : "git://github.com/myusernamejeep/sample-jenkins-grunt.git"
   },
   "keywords": [
     "jenkins",
     "grunt",
-    "sample"
+    "jasmine"
   ],
-  "author": "sideroad",
+ 
   "license": "MIT",
   "devDependencies": {
     "grunt-contrib-clean": "~0.4.0",
@@ -20,6 +30,8 @@
     "grunt-contrib-uglify": "~0.2.0",
     "grunt-testem": "~0.3.6",
     "grunt-qunit-cov": "~0.3.2",
-    "grunt-plato": "~0.2.0"
+    "grunt-plato": "~0.2.0",
+	"grunt-jasmine-runner" : "latest",
+	"grunt"         : "~0.3.9"
   }
 }
